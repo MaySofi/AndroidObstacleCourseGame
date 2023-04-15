@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">ObstacleCourseGame</string>
+    <string name="button_left_bottom">ButtonLeftBottom</string>
+    <string name="button_right_bottom">ButtonRightBottom</string>
+    <string name="car_pink">PinkCar</string>
+    <string name="stone">Stone</string>
+    <string name="icon_heart">HeartIcon</string>
+    <string name="Score">Score:\t</string>
+</resources>
