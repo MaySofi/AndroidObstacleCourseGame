@@ -11,7 +11,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.GridLayout;
 import android.widget.ImageButton;
@@ -42,30 +41,27 @@ public class MainActivity extends AppCompatActivity {
     private static final int RIGHT = 4;
     private static final int STOP_TIMER = 1;
     private static final int SUCCESS_REFRESH = 0;
-    private static int pos = CENTER;
     private final int COLS = 5;
     private final int ROWS = 8;
     private final ImageView[][] imageViewMatrix = new ImageView[ROWS][COLS];
-
     private final int[][] visibilityMatrix = new int[ROWS][COLS];
     private final ImageView[][] coinsMatrix = new ImageView[ROWS][COLS];
     private final int[][] coinVisibilityMatrix = new int[ROWS][COLS];
     private ImageButton leftButton, rightButton;
-    private int failures = 0;
     private ShapeableImageView[] main_IMG_hearts;
     private ImageView[] imageViewCar;
     private TextView scoreView;
-    private GridLayout gridLayout;
-    private GridLayout coinsGridLayout;
+    private GridLayout gridLayout, coinsGridLayout;
     private GameManager gameManager;
     private Timer timer;
     private MediaPlayer mediaPlayer;
     private RotationDetector rotationDetector;
     private boolean sensor;
+    private int failures = 0;
+    private int pos = CENTER;
     public enum Type{
         ROCK, COIN
     }
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -76,12 +72,7 @@ public class MainActivity extends AppCompatActivity {
 
         Intent previousIntent = getIntent();
         player = previousIntent.getStringExtra(KEY_NAME);
-        Log.d("CallBack_SendClick", "userNameChosen: "+player);
-
         DELAY = previousIntent.getIntExtra(KEY_DELAY, (int) DELAY);
-        Log.d("MainActivity", "KEY_DELAY = " + DELAY);
-
-        // TODO: add sensor option.
         sensor = previousIntent.getBooleanExtra(KEY_SENSOR, false);
 
         gameManager = new GameManager(main_IMG_hearts.length);

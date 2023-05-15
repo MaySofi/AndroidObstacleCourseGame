@@ -7,7 +7,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 
 import com.example.obstaclecoursegame.Fragments.ListFragment;
 import com.example.obstaclecoursegame.Fragments.MapFragment;
@@ -57,22 +56,10 @@ public class RecordActivity extends AppCompatActivity {
         player = previousIntent.getStringExtra(KEY_NAME);
         score = previousIntent.getIntExtra(KEY_SCORE, -1);
 
-        // TODO: add SensorManager.
-
         initRecordFragments();
         beginTransactions();
 
         handleNewPlayer();
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-    }
-
-    @Override
-    protected void onPause() {
-        super.onPause();
     }
 
     private void beginTransactions() {
@@ -99,7 +86,6 @@ public class RecordActivity extends AppCompatActivity {
                                                 .getName()))
                         .findFirst()
                         .orElse(null));
-        Log.d("RecordActivity", "onResume: playerIndex = " + playerIndex);
 
         if(playerIndex != -1) {
             LatLng latLng = mapFragment.getCurrentPlayerCoordinates();

@@ -9,7 +9,6 @@ import android.os.Bundle;
 import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.Fragment;
 
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -42,10 +41,6 @@ public class MapFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_map, container, false);
         findViews(view);
-
-        String fromSP = MySPv.getInstance().getString("MapFragment","");
-        LatLng fromJson = new Gson().fromJson(fromSP, LatLng.class);
-        Log.d("RecordActivity", "onCreateView: json:" + fromJson);
         return view;
     }
 
@@ -71,6 +66,7 @@ public class MapFragment extends Fragment {
                 }).check();
 
     }
+
     public void zoomOnRecord(double latitude, double longitude) {
         supportMapFragment.getMapAsync(googleMap -> {
             LatLng user = new LatLng(latitude, longitude);

@@ -13,15 +13,15 @@ import com.example.obstaclecoursegame.R;
 import com.google.android.material.textview.MaterialTextView;
 
 import java.util.ArrayList;
+import java.util.Locale;
 
 public class PlayerAdapter extends RecyclerView.Adapter<PlayerAdapter.PlayerViewHolder> {
-    private ArrayList<Player> players;
+    private final ArrayList<Player> players;
+    private PlayerCallback playerCallback;
 
     public PlayerAdapter(ArrayList<Player> players) {
         this.players = players;
     }
-
-    private PlayerCallback playerCallback;
 
     public void setPlayerCallback(PlayerCallback playerCallback) {
         this.playerCallback = playerCallback;
@@ -31,15 +31,14 @@ public class PlayerAdapter extends RecyclerView.Adapter<PlayerAdapter.PlayerView
     @Override
     public PlayerViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.player_item, parent, false);
-        PlayerViewHolder playerViewHolder = new PlayerViewHolder(view);
-        return playerViewHolder;
+        return new PlayerViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull PlayerViewHolder holder, int position) {
         Player player = getItem(position);
         holder.player_LBL_name.setText(player.getName());
-        holder.player_LBL_score.setText(player.getScore() + "");
+        holder.player_LBL_score.setText(String.format(Locale.US,"%d", player.getScore()));
     }
 
     @Override
@@ -47,14 +46,13 @@ public class PlayerAdapter extends RecyclerView.Adapter<PlayerAdapter.PlayerView
         return this.players == null ? 0 : this.players.size();
     }
 
-
     private Player getItem(int position) {
         return this.players.get(position);
     }
 
     public class PlayerViewHolder extends RecyclerView.ViewHolder {
-        private MaterialTextView player_LBL_name;
-        private MaterialTextView player_LBL_score;
+        private final MaterialTextView player_LBL_name;
+        private final MaterialTextView player_LBL_score;
         public PlayerViewHolder(@NonNull View itemView) {
             super(itemView);
             this.player_LBL_name = itemView.findViewById(R.id.player_LBL_name);
