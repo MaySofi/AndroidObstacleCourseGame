@@ -1,14 +1,14 @@
 package com.example.obstaclecoursegame.Utilities;
 
 import android.content.Context;
-import android.os.Build;
 import android.os.VibrationEffect;
 import android.os.Vibrator;
 import android.widget.Toast;
 
+
 public class SignalGenerator {
     public static SignalGenerator instance;
-    private Context context;
+    private final Context context;
     private static Vibrator vibrator;
 
     private SignalGenerator(Context context) {
@@ -26,20 +26,13 @@ public class SignalGenerator {
         return instance;
     }
 
-
-    public void toast(String text,int length){
+    public void toast(String text, int length) {
         Toast
-                .makeText(context,text,length)
+                .makeText(context, text, length)
                 .show();
     }
 
-    public void vibrate(long length){
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            vibrator.vibrate(VibrationEffect.createOneShot(500, VibrationEffect.DEFAULT_AMPLITUDE));
-        } else {
-            //deprecated in API 26
-            vibrator.vibrate(500);
-        }
+    public void vibrate() {
+        vibrator.vibrate(VibrationEffect.createOneShot(500, VibrationEffect.DEFAULT_AMPLITUDE));
     }
-
 }

@@ -9,9 +9,15 @@
     android:paddingEnd="20dp"
     android:paddingBottom="20dp"
     android:paddingTop="20dp"
-    android:background="@drawable/road"
+    android:background="@drawable/ic_background_road5"
     tools:context=".MainActivity">
 
+    <FrameLayout
+        android:id="@+id/main_FRAME_menu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="0dp"
+        />
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -67,11 +73,542 @@
 
 
     <GridLayout
+        android:id="@+id/coins"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:rowCount="10"
+        android:columnCount="5"
+        android:layout_marginTop="40dp">
+
+        <ImageView
+            android:id="@+id/coin00"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:padding="10dp"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:src="@drawable/ic_icon_coin01"
+            android:contentDescription="@null"/>
+        <ImageView
+            android:id="@+id/coin01"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:padding="10dp"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:src="@drawable/ic_icon_coin01"
+            android:contentDescription="@null"/>
+        <ImageView
+            android:id="@+id/coin02"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:padding="10dp"
+            android:layout_row="0"
+            android:layout_column="2"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:src="@drawable/ic_icon_coin01"
+            android:contentDescription="@null"/>
+        <ImageView
+            android:id="@+id/coin03"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:padding="10dp"
+            android:layout_row="0"
+            android:layout_column="3"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:src="@drawable/ic_icon_coin01"
+            android:contentDescription="@null"/>
+        <ImageView
+            android:id="@+id/coin04"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:padding="10dp"
+            android:layout_row="0"
+            android:layout_column="4"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:src="@drawable/ic_icon_coin01"
+            android:contentDescription="@null"/>
+
+        <ImageView
+            android:id="@+id/coin10"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:padding="10dp"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:src="@drawable/ic_icon_coin01"
+            android:contentDescription="@null"/>
+        <ImageView
+            android:id="@+id/coin11"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:padding="10dp"
+            android:layout_row="1"
+            android:layout_column="1"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:src="@drawable/ic_icon_coin01"
+            android:contentDescription="@null"/>
+        <ImageView
+            android:id="@+id/coin12"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:padding="10dp"
+            android:layout_row="1"
+            android:layout_column="2"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:src="@drawable/ic_icon_coin01"
+            android:contentDescription="@null"/>
+        <ImageView
+            android:id="@+id/coin13"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:padding="10dp"
+            android:layout_row="1"
+            android:layout_column="3"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:src="@drawable/ic_icon_coin01"
+            android:contentDescription="@null"/>
+        <ImageView
+            android:id="@+id/coin14"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:padding="10dp"
+            android:layout_row="1"
+            android:layout_column="4"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:src="@drawable/ic_icon_coin01"
+            android:contentDescription="@null"/>
+
+        <ImageView
+            android:id="@+id/coin20"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:padding="10dp"
+            android:layout_row="2"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:src="@drawable/ic_icon_coin01"
+            android:contentDescription="@null"/>
+        <ImageView
+            android:id="@+id/coin21"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:padding="10dp"
+            android:layout_row="2"
+            android:layout_column="1"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:src="@drawable/ic_icon_coin01"
+            android:contentDescription="@null"/>
+        <ImageView
+            android:id="@+id/coin22"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:padding="10dp"
+            android:layout_row="2"
+            android:layout_column="2"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:src="@drawable/ic_icon_coin01"
+            android:contentDescription="@null"/>
+        <ImageView
+            android:id="@+id/coin23"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:padding="10dp"
+            android:layout_row="2"
+            android:layout_column="3"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:src="@drawable/ic_icon_coin01"
+            android:contentDescription="@null"/>
+        <ImageView
+            android:id="@+id/coin24"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:padding="10dp"
+            android:layout_row="2"
+            android:layout_column="4"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:src="@drawable/ic_icon_coin01"
+            android:contentDescription="@null"/>
+
+        <ImageView
+            android:id="@+id/coin30"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:padding="10dp"
+            android:layout_row="3"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:src="@drawable/ic_icon_coin01"
+            android:contentDescription="@null"/>
+        <ImageView
+            android:id="@+id/coin31"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:padding="10dp"
+            android:layout_row="3"
+            android:layout_column="1"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:src="@drawable/ic_icon_coin01"
+            android:contentDescription="@null"/>
+        <ImageView
+            android:id="@+id/coin32"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:padding="10dp"
+            android:layout_row="3"
+            android:layout_column="2"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:src="@drawable/ic_icon_coin01"
+            android:contentDescription="@null"/>
+        <ImageView
+            android:id="@+id/coin33"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:padding="10dp"
+            android:layout_row="3"
+            android:layout_column="3"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:src="@drawable/ic_icon_coin01"
+            android:contentDescription="@null"/>
+        <ImageView
+            android:id="@+id/coin34"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:padding="10dp"
+            android:layout_row="3"
+            android:layout_column="4"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:src="@drawable/ic_icon_coin01"
+            android:contentDescription="@null"/>
+
+        <ImageView
+            android:id="@+id/coin40"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:padding="10dp"
+            android:layout_row="4"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:src="@drawable/ic_icon_coin01"
+            android:contentDescription="@null"/>
+        <ImageView
+            android:id="@+id/coin41"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:padding="10dp"
+            android:layout_row="4"
+            android:layout_column="1"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:src="@drawable/ic_icon_coin01"
+            android:contentDescription="@null"/>
+        <ImageView
+            android:id="@+id/coin42"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:padding="10dp"
+            android:layout_row="4"
+            android:layout_column="2"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:src="@drawable/ic_icon_coin01"
+            android:contentDescription="@null"/>
+        <ImageView
+            android:id="@+id/coin43"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:padding="10dp"
+            android:layout_row="4"
+            android:layout_column="3"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:src="@drawable/ic_icon_coin01"
+            android:contentDescription="@null"/>
+        <ImageView
+            android:id="@+id/coin44"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:padding="10dp"
+            android:layout_row="4"
+            android:layout_column="4"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:src="@drawable/ic_icon_coin01"
+            android:contentDescription="@null"/>
+
+        <ImageView
+            android:id="@+id/coin50"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:padding="10dp"
+            android:layout_row="5"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:src="@drawable/ic_icon_coin01"
+            android:contentDescription="@null"/>
+        <ImageView
+            android:id="@+id/coin51"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:padding="10dp"
+            android:layout_row="5"
+            android:layout_column="1"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:src="@drawable/ic_icon_coin01"
+            android:contentDescription="@null"/>
+        <ImageView
+            android:id="@+id/coin52"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:padding="10dp"
+            android:layout_row="5"
+            android:layout_column="2"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:src="@drawable/ic_icon_coin01"
+            android:contentDescription="@null"/>
+        <ImageView
+            android:id="@+id/coin53"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:padding="10dp"
+            android:layout_row="5"
+            android:layout_column="3"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:src="@drawable/ic_icon_coin01"
+            android:contentDescription="@null"/>
+        <ImageView
+            android:id="@+id/coin54"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:padding="10dp"
+            android:layout_row="5"
+            android:layout_column="4"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:src="@drawable/ic_icon_coin01"
+            android:contentDescription="@null"/>
+
+        <ImageView
+            android:id="@+id/coin60"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:padding="10dp"
+            android:layout_row="6"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:src="@drawable/ic_icon_coin01"
+            android:contentDescription="@null"/>
+        <ImageView
+            android:id="@+id/coin61"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:padding="10dp"
+            android:layout_row="6"
+            android:layout_column="1"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:src="@drawable/ic_icon_coin01"
+            android:contentDescription="@null"/>
+        <ImageView
+            android:id="@+id/coin62"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:padding="10dp"
+            android:layout_row="6"
+            android:layout_column="2"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:src="@drawable/ic_icon_coin01"
+            android:contentDescription="@null"/>
+        <ImageView
+            android:id="@+id/coin63"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:padding="10dp"
+            android:layout_row="6"
+            android:layout_column="3"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:src="@drawable/ic_icon_coin01"
+            android:contentDescription="@null"/>
+        <ImageView
+            android:id="@+id/coin64"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:padding="10dp"
+            android:layout_row="6"
+            android:layout_column="4"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:src="@drawable/ic_icon_coin01"
+            android:contentDescription="@null"/>
+
+        <ImageView
+            android:id="@+id/coin70"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:padding="10dp"
+            android:layout_row="7"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:src="@drawable/ic_icon_coin01"
+            android:contentDescription="@null"/>
+        <ImageView
+            android:id="@+id/coin71"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:padding="10dp"
+            android:layout_row="7"
+            android:layout_column="1"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:src="@drawable/ic_icon_coin01"
+            android:contentDescription="@null"/>
+        <ImageView
+            android:id="@+id/coin72"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:padding="10dp"
+            android:layout_row="7"
+            android:layout_column="2"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:src="@drawable/ic_icon_coin01"
+            android:contentDescription="@null"/>
+        <ImageView
+            android:id="@+id/coin73"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:padding="10dp"
+            android:layout_row="7"
+            android:layout_column="3"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:src="@drawable/ic_icon_coin01"
+            android:contentDescription="@null"/>
+        <ImageView
+            android:id="@+id/coin74"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:padding="10dp"
+            android:layout_row="7"
+            android:layout_column="4"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:src="@drawable/ic_icon_coin01"
+            android:contentDescription="@null"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_row="8"
+            android:layout_column="0"/>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_row="8"
+            android:layout_column="1"/>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_row="8"
+            android:layout_column="2"/>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_row="8"
+            android:layout_column="3"/>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_row="8"
+            android:layout_column="4"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_row="9"
+            android:layout_column="0"/>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_row="9"
+            android:layout_column="1"/>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_row="9"
+            android:layout_column="2"/>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_row="9"
+            android:layout_column="3"/>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_row="9"
+            android:layout_column="4"/>
+
+
+    </GridLayout>
+
+    <GridLayout
         android:id="@+id/road"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:rowCount="8"
-        android:columnCount="3"
+        android:rowCount="10"
+        android:columnCount="5"
         android:layout_marginTop="40dp">
 
         <!-- Row 1 -->
@@ -79,6 +616,7 @@
             android:id="@+id/stone00"
             android:layout_width="0dp"
             android:layout_height="0dp"
+            android:padding="0dp"
             android:layout_row="0"
             android:layout_column="0"
             android:layout_columnWeight="1"
@@ -103,6 +641,28 @@
             android:layout_height="0dp"
             android:layout_row="0"
             android:layout_column="2"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:src="@drawable/ic_stone"
+            android:contentDescription="@string/stone"/>
+
+        <ImageView
+            android:id="@+id/stone03"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_row="0"
+            android:layout_column="3"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:src="@drawable/ic_stone"
+            android:contentDescription="@string/stone"/>
+
+        <ImageView
+            android:id="@+id/stone04"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_row="0"
+            android:layout_column="4"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
             android:src="@drawable/ic_stone"
@@ -142,6 +702,28 @@
             android:src="@drawable/ic_stone"
             android:contentDescription="@string/stone"/>
 
+        <ImageView
+            android:id="@+id/stone13"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_row="1"
+            android:layout_column="3"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:src="@drawable/ic_stone"
+            android:contentDescription="@string/stone"/>
+
+        <ImageView
+            android:id="@+id/stone14"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_row="1"
+            android:layout_column="4"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:src="@drawable/ic_stone"
+            android:contentDescription="@string/stone"/>
+
         <!-- Row 3 -->
         <ImageView
             android:id="@+id/stone20"
@@ -171,6 +753,28 @@
             android:layout_height="0dp"
             android:layout_row="2"
             android:layout_column="2"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:src="@drawable/ic_stone"
+            android:contentDescription="@string/stone"/>
+
+        <ImageView
+            android:id="@+id/stone23"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_row="2"
+            android:layout_column="3"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:src="@drawable/ic_stone"
+            android:contentDescription="@string/stone"/>
+
+        <ImageView
+            android:id="@+id/stone24"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_row="2"
+            android:layout_column="4"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
             android:src="@drawable/ic_stone"
@@ -210,6 +814,28 @@
             android:src="@drawable/ic_stone"
             android:contentDescription="@string/stone"/>
 
+        <ImageView
+            android:id="@+id/stone33"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_row="3"
+            android:layout_column="3"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:src="@drawable/ic_stone"
+            android:contentDescription="@string/stone"/>
+
+        <ImageView
+            android:id="@+id/stone34"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_row="3"
+            android:layout_column="4"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:src="@drawable/ic_stone"
+            android:contentDescription="@string/stone"/>
+
         <!-- Row 5 -->
         <ImageView
             android:id="@+id/stone40"
@@ -239,6 +865,28 @@
             android:layout_height="0dp"
             android:layout_row="4"
             android:layout_column="2"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:src="@drawable/ic_stone"
+            android:contentDescription="@string/stone"/>
+
+        <ImageView
+            android:id="@+id/stone43"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_row="4"
+            android:layout_column="3"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:src="@drawable/ic_stone"
+            android:contentDescription="@string/stone"/>
+
+        <ImageView
+            android:id="@+id/stone44"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_row="4"
+            android:layout_column="4"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
             android:src="@drawable/ic_stone"
@@ -278,25 +926,138 @@
             android:src="@drawable/ic_stone"
             android:contentDescription="@string/stone"/>
 
+        <ImageView
+            android:id="@+id/stone53"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_row="5"
+            android:layout_column="3"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:src="@drawable/ic_stone"
+            android:contentDescription="@string/stone"/>
+
+        <ImageView
+            android:id="@+id/stone54"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_row="5"
+            android:layout_column="4"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:src="@drawable/ic_stone"
+            android:contentDescription="@string/stone"/>
+
         <!-- Row 7 -->
         <ImageView
-            android:id="@+id/car"
+            android:id="@+id/stone60"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_row="6"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:src="@drawable/ic_stone"
+            android:contentDescription="@string/stone"/>
+        <ImageView
+            android:id="@+id/stone61"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_row="6"
             android:layout_column="1"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
-            android:background="@android:color/transparent"
-            android:src="@drawable/car_pink"
-            android:scaleType="fitCenter"
-            android:contentDescription="@string/car_pink"/>
-
+            android:src="@drawable/ic_stone"
+            android:contentDescription="@string/stone"/>
         <ImageView
-            android:id="@+id/car0"
+            android:id="@+id/stone62"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_row="6"
+            android:layout_column="2"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:src="@drawable/ic_stone"
+            android:contentDescription="@string/stone"/>
+        <ImageView
+            android:id="@+id/stone63"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_row="6"
+            android:layout_column="3"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:src="@drawable/ic_stone"
+            android:contentDescription="@string/stone"/>
+        <ImageView
+            android:id="@+id/stone64"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_row="6"
+            android:layout_column="4"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:src="@drawable/ic_stone"
+            android:contentDescription="@string/stone"/>
+
+        <!-- Row 8 -->
+        <ImageView
+            android:id="@+id/stone70"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_row="7"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:src="@drawable/ic_stone"
+            android:contentDescription="@string/stone"/>
+        <ImageView
+            android:id="@+id/stone71"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_row="7"
+            android:layout_column="1"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:src="@drawable/ic_stone"
+            android:contentDescription="@string/stone"/>
+        <ImageView
+            android:id="@+id/stone72"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_row="7"
+            android:layout_column="2"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:src="@drawable/ic_stone"
+            android:contentDescription="@string/stone"/>
+        <ImageView
+            android:id="@+id/stone73"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_row="7"
+            android:layout_column="3"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:src="@drawable/ic_stone"
+            android:contentDescription="@string/stone"/>
+        <ImageView
+            android:id="@+id/stone74"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_row="7"
+            android:layout_column="4"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:src="@drawable/ic_stone"
+            android:contentDescription="@string/stone"/>
+
+        <!-- Row 9 -->
+        <ImageView
+            android:id="@+id/car1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_row="8"
             android:layout_column="0"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
@@ -308,7 +1069,19 @@
             android:id="@+id/car2"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_row="6"
+            android:layout_row="8"
+            android:layout_column="1"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:background="@android:color/transparent"
+            android:src="@drawable/car_pink"
+            android:scaleType="fitCenter"
+            android:contentDescription="@string/car_pink"/>
+        <ImageView
+            android:id="@+id/car3"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_row="8"
             android:layout_column="2"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
@@ -316,20 +1089,37 @@
             android:src="@drawable/car_pink"
             android:scaleType="fitCenter"
             android:contentDescription="@string/car_pink"/>
-        <!-- Row 8 -->
-        <View
+        <ImageView
+            android:id="@+id/car4"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_row="7"
-            android:layout_column="1"
+            android:layout_row="8"
+            android:layout_column="3"
             android:layout_columnWeight="1"
-            android:layout_rowWeight="1"/>
+            android:layout_rowWeight="1"
+            android:background="@android:color/transparent"
+            android:src="@drawable/car_pink"
+            android:scaleType="fitCenter"
+            android:contentDescription="@string/car_pink"/>
+        <ImageView
+            android:id="@+id/car5"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_row="8"
+            android:layout_column="4"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:background="@android:color/transparent"
+            android:src="@drawable/car_pink"
+            android:scaleType="fitCenter"
+            android:contentDescription="@string/car_pink"/>
 
+        <!-- Row 10 -->
         <ImageButton
             android:id="@+id/button_left_bottom"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_row="7"
+            android:layout_row="9"
             android:layout_column="0"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
@@ -342,8 +1132,8 @@
             android:id="@+id/button_right_bottom"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_row="7"
-            android:layout_column="2"
+            android:layout_row="9"
+            android:layout_column="4"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
             android:background="@android:color/transparent"

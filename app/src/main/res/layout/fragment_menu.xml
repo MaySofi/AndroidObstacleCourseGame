@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/purple_200"
+    tools:context=".Fragments.MenuFragment">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/menu_ET_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:hint="@string/player_name"
+            android:textColor="@color/black"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            android:maxLines="1"
+            android:minLines="1"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/menu_BTN_play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/menu_ET_name"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="@string/play"
+            android:textAllCaps="true"
+            android:textColor="@color/black"
+            app:backgroundTint="#FCBB86"
+            />
+
+
+
+        <com.google.android.material.button.MaterialButtonToggleGroup
+            android:id="@+id/menu_BTG_mode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:contentDescription="@string/mode"
+            android:layout_below="@id/menu_BTN_play"
+            app:singleSelection="true"
+            android:visibility="visible">
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:textColor="@color/black"
+                android:outlineSpotShadowColor="@color/black"
+                android:backgroundTint="@color/white"
+                app:strokeWidth="3dp"
+                android:id="@+id/menu_BTN_slow"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/slow_mode"
+                android:text="@string/slow_mode"
+                android:layout_marginTop="0dp"
+                android:paddingTop="0dp"
+                android:paddingBottom="0dp"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:minHeight="48dp"
+                android:minWidth="48sp"/>
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:textColor="@color/black"
+                android:outlineSpotShadowColor="@color/black"
+                android:backgroundTint="@color/white"
+                app:strokeWidth="3dp"
+                android:id="@+id/menu_BTN_fast"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/fast_mode"
+                android:text="@string/fast_mode"
+                android:layout_marginTop="0dp"
+                android:paddingTop="0dp"
+                android:paddingBottom="0dp"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:minHeight="48dp"
+                android:minWidth="48sp" />
+
+        </com.google.android.material.button.MaterialButtonToggleGroup>
+
+        <androidx.appcompat.widget.AppCompatToggleButton
+            android:id="@+id/menu_TB_sensors"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/menu_BTG_mode"
+            android:layout_marginTop="30dp"
+            android:textColor="@color/black"
+            android:backgroundTint="#FCF686"
+            android:clickable="true"/>
+
+
+
+    </RelativeLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/menu_BTN_open_records"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="50dp"
+        android:layout_marginStart="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:text="@string/record_screen"
+        android:contentDescription="@string/record_screen"
+        android:textColor="@color/purple_700"
+        android:backgroundTint="@color/white"
+        />
+</RelativeLayout>

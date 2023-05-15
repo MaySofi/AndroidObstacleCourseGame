@@ -6,4 +6,15 @@
     <string name="stone">Stone</string>
     <string name="icon_heart">HeartIcon</string>
     <string name="Score">Score:\t</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="player_name">user name</string>
+    <string name="play">play</string>
+    <string name="mode">Mode</string>
+    <string name="slow_mode">Slow Mode</string>
+    <string name="fast_mode">Fast Mode</string>
+    <string name="sensors">Sensors</string>
+    <string name="name_player">Player Name</string>
+    <string name="score_player">Score</string>
+    <string name="record_screen">Record Screen</string>
+    <string name="map">Map</string>
 </resources>
